@@ -1,0 +1,78 @@
+<html>
+
+ <head>
+ </head>
+
+ <body>
+  <script>
+	function ran(){
+		return Math.floor(Math.random() * 3200);
+	}
+	function prom(a){
+		let f=0,p;
+		
+		for(i=0;i<a.length;i++){
+			f=a[i]+f;
+		}
+		p=f/a.length;
+		return p;
+	}
+	
+	function vectb(a){
+		let b=[];
+		for(i=0;i<a.length;i++){
+			if(a[i]>p){
+				b.push(a[i]);
+			}
+		}
+		return b;
+	}
+	
+	function mult(a){
+		let dt=0;
+		for(i=0;i<a.length;i++){
+			if(a[i] % 2==0 && a[i] % 3==0){
+				dt=dt+1;
+			}
+		}
+		return dt;
+	}
+	
+	function suma(a){
+		let s=0;
+		
+		for(i=0;i<a.length;i++){
+			s=a[i]+s;
+		}
+		return s;
+	}
+	
+	function vectc(a){
+		let c=[a.length];
+		for(i=0;i<a.length;i++){
+			c[i]=a[i]*2;
+		}
+		return c;
+	}
+	
+	let n;
+	
+	n=prompt('ingrese un numero ','');
+	
+	let a=[n];
+	
+	for(i=0;i<n;i++){
+		a[i]=ran();
+	}
+	
+	let p=prom(a);
+	let b=vectb(a);
+	let dt=mult(a);
+	let s=suma(a);
+	let c=vectc(a);
+	
+	document.write('Promedio: ' + p + '<br>' + 'Multiplos de 2 y 3: ' + dt + '<br>' + 'Suma: ' + s + '<br>' + 'Vector a: ' + a + '<br>'+'Vector b: '+b+'<br>'+'Vector c: '+c+'<br>');
+  </script>
+ </body>
+
+</html>
